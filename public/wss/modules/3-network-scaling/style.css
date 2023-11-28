@@ -1,0 +1,114 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0px 0px 100px 0px;
+}
+
+header {
+    padding: 1em;
+    color: #ffffff;
+    background: #8c1d40;
+    clear: none;
+    text-align: center;
+}
+
+footer {
+    color: #000000;
+    background: #ffc267;
+    clear: none;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding: 13px 0px;
+}
+
+.block {
+    width: 800px;
+    margin: 0px auto;
+}
+
+.block--centered {
+    text-align: center;
+}
+
+.block--bottom {
+    display: flex;
+    border: 1px solid black;
+}
+
+.pane {
+    width: 400px;
+    /* height: 564px; */
+}
+
+.pane--right {
+    border-left: 1px solid black;
+}
+
+.segment {
+    padding: 1em;
+}
+
+.segment--top {
+    padding: 0em;
+    height: 400px;
+}
+
+.segment--bottom {
+    border-top: 1px solid black;
+}
+
+.segment--dark {
+    background: #eeeeee;
+}
+
+.segment--plotly {
+    padding: 0em;
+    height: 163px;
+}
+
+.segment__header {
+    margin-top: 0em;
+}
+
+.parameter {
+    display: flex;
+    flex-justify: space-between;
+}
+
+.parameter--first {
+    margin-bottom: 1em;
+}
+
+.parameter--mechanism {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.parameter__label {
+    margin-right: 1em;
+}
+
+.parameter__range {
+    flex-grow: 2;
+}
+
+.parameter__output {
+    margin-left: 1em;
+    width: 4em;
+}
+
+.properties__label {
+    padding: 0em 1em 0em 0em;
+    font-style: italic;
+}
+
+.properties__value {
+    padding: 0em;
+}
