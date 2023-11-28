@@ -181,13 +181,13 @@ const Simulator = function(graphid, plotid, propsid, nodes, er, ba, mechanism) {
 
     const properties = function() {
         const props = [
-            { 'label': 'Generative Mechanism', 'value': MechanismName[mechanism] },
-            { 'label': 'Number of Nodes', 'value': nodes.value },
-            { 'label': 'Parameters', 'value': parameters() },
-            { 'label': 'Number of Components', 'value': G.components().length },
-            { 'label': 'Density', 'value': jsnx.density(G).toFixed(3) },
-            { 'label': 'Mean Degree', 'value': G.meanDegree().toFixed(3) },
-            { 'label': 'Average Shortest Path Length', value: G.averageShortestPath().toFixed(3) }
+            { 'label': 'Mécanisme Génératif', 'value': MechanismName[mechanism] },
+            { 'label': 'Nombre de nœuds', 'value': nodes.value },
+            { 'label': 'Paramètres', 'value': parameters() },
+            { 'label': 'Nombre de composants', 'value': G.components().length },
+            { 'label': 'Densité', 'value': jsnx.density(G).toFixed(3) },
+            { 'label': 'Degré moyen', 'value': G.meanDegree().toFixed(3) },
+            { 'label': 'Longueur moyenne du chemin le plus court', value: G.averageShortestPath().toFixed(3) }
         ];
 
         d3.select(propsid).selectAll('table').remove();
