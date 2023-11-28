@@ -1,0 +1,109 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="src/style.css" type="text/css" rel="stylesheet">
+    <title>1D Elementary Cellular Automata</title>
+    <script type="application/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134762433-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-134762433-1');
+    </script>
+    
+</head>
+<body>
+    <header>
+        <h1>1D Elementary Cellular Automata (1D ECA)</h1>
+    </header>
+    <div id="introduction">
+        <p>
+            This 1-Dimensional Elementary Cellular Automata (1D ECA) is a Cellular Automata (CA) where the current state is only one dimension and where each cell is either black or white. The next state is determined by the state of the cell above and its neighbors as dictated by the rules. The neighborhood usually includes the adjacent cells but could include other faraway cells. There are numerous sets of rules that dictate the next state. The example here models one set of rules. How many rule variations are possible?
+<!--         <h4>To engage the simulator: </h4>   
+        <OL>
+        <li>Select the rule number. </li>
+        <li>Click either Step, Run (in conjunction with Stop) or Run to End. Run to End will give you all evaluations. Step allows you to see the next row. </li>
+        <li>After the CA is complete, click Clear to start over.</li>  
+        <li>You can set the initial list to Single Cell or Random Cell.</li>  
+        <li>You can alter the ECA rule by clicking rule configuration on the above or setting the rule number.</li>  
+        </OL> -->
+        </p>
+    </div>
+
+<!--     <h1>1D Elementary Cellular Automata (1D ECA)</h1>
+    <div id="introduction">
+        <h2>What is Cellular Automata?</h2>
+        <p>
+            Consider many cells that form a list or matrix. Each of them have multiple colors, or states. These cells will
+            change their colors depende on their neighbors based on a specific rule. These collection of cells with a certain
+            rule, is a cellular automata (CA).
+        </p>
+        <p>
+            For cells on a list, we call them 1 dimensional cellular automata (1D CA). Their neighbors could be their adjacent
+            cells or other faraway cells. For cells on a matrix, we call them 2 dimensional cellular automata (2D CA), which have
+            similar definition of neighbors.
+        </p>
+    </div> -->
+    <div style="width:90%; margin:10 auto; overflow:auto; _display:inline-block;">
+        <div style="width:500px; float:left;">
+            <div id="setting">
+            CA Rule: <input class="input" type="number" min="0" max="255" name="CARule" value="110" onchange="setRule()" id="CARule"/>
+            Size: <input class="input" type="number" min="0" max="255" name="CASize" value="20" onchange="setSize()" id="CASize"/>
+            <br>
+            <svg id="ECARule" width="500" height="60"></svg>
+            </div>
+            <br>
+            <div id="display">
+            <svg id="CA" width="500" height="500"></svg>
+            </div>
+            <div id="control">
+            <input class="input" type="button" value="Run" id="run" onclick="continuerun()"/>
+            <input class="input" type="button" value="Stop" id="stop" onclick="stop()"/>
+            <input class="input" type="button" value="Step" onclick="OneStep()" id="step"/>
+            <input class="input" type="button" value="Run to End" id="run_end" onclick="RunToEnd()"/>
+            <input class="input" type="button" value="Clear" onclick="clearCells()" id="clear"/>
+            <br>
+            Set initial cells:
+            <input class="input" type="button" value="Single Cell" onclick="setSingleInitCells()"/>
+            <input class="input" type="button" value="Random Cell" onclick="setRandomInitCells()"/>
+        <br>
+        <!-- Following is test controler -->
+        <!--<h3>Test</h3>
+        <input type="button" value="Random Cells" onclick="setRandomCells()"/>-->
+        <!-- Bug: It will create cells again -->
+            </div>
+        </div>
+        <div style=" margin-left:520px;">
+            <h3>Introduction to the 1D ECA Simulator</h3>
+            <p>
+                To engage the simulator:
+                <OL>
+            	<li>Click either Run (in conjunction with Stop), Step or Run to End. Run will allow you to start the simulation with the option to Stop it. Run to End will give you all evaluations. Step allows you to see the next row. </li>
+            	<li>After the CA is complete, click Clear to start over. </li>
+            	</OL>
+        	</p>
+        	<p>
+            	To explore:
+            	<OL>
+            	<li>You can explore setting the initial list to Single Cell or Random Cell. Single Cell only starts with one black cell whereas Random Cell creates a random first state.</li>
+            	<li>You can alter the CA rule to see how different sets of rules affect the outcome. Change the CA rule one by one and see how the rules change.</li>
+            	<li>You change the Size of the ECA and see how bigger or smaller ECAs will allow you to see different patterns.</li>
+                </OL>
+            </p>
+<!--             <p>We have a simulator on the left. You can click Run/Stop can run the CA. "Run to End" will give you all evaluations. You can
+                also set the initial list to single cell or random cells. You can alter the ECA rule by clicking rule configuration on the
+                above or setting the rule number.  -->
+        </div>
+    </div>
+    <footer>
+        Copyright © 2018, <a href="https://emergence.asu.edu">Emergence@ASU</a>
+    </footer>
+</body>
+
+<script type="application/javascript" src="src/script.js"></script>
+
+</html>
